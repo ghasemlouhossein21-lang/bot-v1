@@ -680,7 +680,7 @@ def admin_free_test_map_panels_keyboard(num: int, vpn_panels: list):
     """انتخاب نمونه‌ی پنل فعال برای نگاشت یک پلن تست (num=0 یعنی پلن پیش‌فرض)."""
     rows = [[InlineKeyboardButton(text=f"🖥 {panels.panel_label(p)}", callback_data=f"ftmap|{num}|{p['id']}", style="primary")]
             for p in vpn_panels]
-    rows.append([InlineKeyboardButton(text=t("ft_admin_btn_later"), callback_data="admin_free_test_settings", style="secondary")])
+    rows.append([InlineKeyboardButton(text=t("ft_admin_btn_later"), callback_data="admin_free_test_settings")])
     return InlineKeyboardMarkup(inline_keyboard=rows)
 
 
